@@ -170,7 +170,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -178,6 +178,14 @@ def vee(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(1, r + 1):
+        print((k - 1) * ' ', end='')
+        for j in range(1, r - k + 2):
+            print(j, end='')
+        print('-', end='')
+        for m in range(k, r + 1):
+            print(r + 1 - m, end='')
+        print()
 
 
 def run_test_numbers_constant_forward():
@@ -226,7 +234,7 @@ def numbers_constant_forward(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
@@ -236,6 +244,12 @@ def numbers_constant_forward(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for m in range(1, maxnum + 1):
+            for j in range(n):
+                print(m, end='')
+            print(end=' ')
+        print()
 
 
 def run_test_numbers_constant_backwards():
@@ -270,7 +284,7 @@ def numbers_constant_backwards(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -278,6 +292,12 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for m in range(1, maxnum + 1):
+            for q in range(n):
+                print(maxnum + 1 - m, end='')
+            print(end=' ')
+        print()
 
 
 def run_test_numbers_increasing_forward():
@@ -322,7 +342,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -330,6 +350,12 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for m in range(1, maxnum + 1):
+            for j in range(m):
+                print(m, end='')
+            print(end=' ')
+        print()
 
 
 # ----------------------------------------------------------------------
